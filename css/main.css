@@ -293,8 +293,13 @@
 .modal-button {
   display: flex;
   padding: 0px;
+  margin-left: auto;
+  margin-right: 8px;
+  margin-top: 8px;
   border: none;
   background-color: #ffffff;
+  width: 30px;
+  height: 30px;
 }
 .modal-button > .icon {
   align-items: center;
@@ -305,4 +310,36 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+}
+
+.text-modal {
+  margin-top: 2px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+}
+.form-item {
+  margin-bottom: 28px;
+}
+.input-field {
+  margin-top: 4px;
+  padding: 11px 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+}
+.form-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.form-item .icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
 }
