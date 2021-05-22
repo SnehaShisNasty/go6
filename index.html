@@ -516,44 +516,92 @@
               </li>
             </ul>
           </div>
+
+          <div class="subscribe-wrapper">
+            <h3>Подпишитесь на рассылку</h3>
+            <div class="subscribe-content">
+              <input
+                class="input-footer"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+              <button class="subscribe-button" type="submit">
+                Подписаться
+                <svg class="icon" width="24px" height="24px">
+                  <use href="./img/common/svg/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-button" data-modal-close>
-          <svg class="icon" width="30" height="30">
+        <form class="form" autocomplete="off">
+          <h3 class="title">Оставьте свои данные, мы вам перезвоним</h3>
+
+          <label class="form-label"
+            >Имя
+            <input class="input" type="text" name="user-name" />
+            <svg class="icon-form" width="18px" height="18px">
+              <use href="./img/common/svg/sprite.svg#icon-person"></use>
+            </svg>
+          </label>
+
+          <label class="form-label"
+            >Телефон
+            <input class="input" type="tel" name="user-tel" />
+            <svg class="icon-form" width="18px" height="18px">
+              <use href="./img/common/svg/sprite.svg#icon-phone"></use>
+            </svg>
+          </label>
+
+          <label class="form-label"
+            >Почта
+            <input class="input" type="email" name="user-email" />
+            <svg class="icon-form" width="18px" height="18px">
+              <use href="./img/common/svg/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <label class="form-label"
+            >Коментарий
+            <textarea
+              class="comment-textarea"
+              name="comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+
+          <input
+            class="agreement-checkbox visually-hidden"
+            type="checkbox"
+            name="agreement"
+            id="agreement"
+          />
+          <label class="agreement-label" for="agreement"
+            >Соглашаюсь с рассылкой и принимаю
+            <a
+              class="agreement-link"
+              target="_blank"
+              rel="noopener noreffer"
+              aria-label="agreement"
+              href="#"
+            >
+              Условия договора</a
+            >
+          </label>
+
+          <button class="button-send" type="submit">Отправить</button>
+        </form>
+
+        <button type="button" class="button-close" data-modal-close>
+          <svg class="icon-close" width="11px" height="11px">
             <use href="./img/common/svg/sprite.svg#icon-close-black"></use>
           </svg>
         </button>
-        <div class="form-section">
-          <p class="text-modal">Оставьте свои данные, мы вам перезвоним</p>
-          <form>
-            <ul class="form-list list">
-              <li class="form-item">
-                <label class="form-label" for="name">Имя</label>
-                <input type="text" name="name" class="input-field" id="name" />
-                <svg class="icon">
-                  <use href="./img/common/svg/sprite.svg#icon-person"></use>
-                </svg>
-              </li>
-              <li class="form-item">
-                <label class="form-label" for="tel">Телефон</label>
-                <input type="tel" name="tel" class="input-field" id="tel" />
-                <svg class="icon">
-                  <use href="./img/common/svg/sprite.svg#icon-phone"></use>
-                </svg>
-              </li>
-              <li class="form-item">
-                <label class="form-label" for="mail">Почта</label>
-                <input type="email" name="mail" class="input-field" id="mail" />
-                <svg class="icon">
-                  <use href="./img/common/svg/sprite.svg#icon-email"></use>
-                </svg>
-              </li>
-            </ul>
-          </form>
-        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
