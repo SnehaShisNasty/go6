@@ -19,7 +19,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.section-hero .heading {
+.section-hero__title {
   color: #ffffff;
   font-weight: 900;
   font-size: 44px;
@@ -28,7 +28,7 @@
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-.button-hero {
+.section-hero__button {
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
@@ -46,18 +46,18 @@
   padding-bottom: 94px;
 }
 
-.feature-list {
+.section-feature__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.feature-item {
+.section-feature__item {
   flex-basis: calc((100% - 30px * 4) / 4);
   margin-left: 30px;
   margin-top: 30px;
 }
-.feature-item::before {
+.section-feature__item::before {
   display: block;
   content: "";
   height: 120px;
@@ -67,20 +67,20 @@
   background-color: #f5f4fa;
   border-radius: 4px;
 }
-.feature-item:nth-child(1)::before {
+.section-feature__item:nth-child(1)::before {
   background-image: url(../img/main/feature/1.svg);
 }
-.feature-item:nth-child(2)::before {
+.section-feature__item:nth-child(2)::before {
   background-image: url(../img/main/feature/2.svg);
 }
-.feature-item:nth-child(3)::before {
+.section-feature__item:nth-child(3)::before {
   background-image: url(../img/main/feature/3.svg);
 }
-.feature-item:nth-child(4)::before {
+.section-feature__item:nth-child(4)::before {
   background-image: url(../img/main/feature/4.svg);
 }
 
-.feature-item > .feature-title {
+.section-feature__item > .section-feature__title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -89,7 +89,7 @@
   margin-bottom: 10px;
   margin-top: 30px;
 }
-.feature-item > .feature-text {
+.section-feature__item > .section-feature__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -97,13 +97,13 @@
 .section-gallery {
   padding-bottom: 94px;
 }
-.gallery-list {
+.section-gallery__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.gallery-item {
+.section-gallery__item {
   position: relative;
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   margin-left: 30px;
@@ -111,7 +111,7 @@
   display: flex;
 }
 
-.gallery-text {
+.section-gallery__label {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -135,30 +135,30 @@
   padding-bottom: 94px;
   background-color: #f5f4fa;
 }
-.section-about .card-set {
+.section-about .section-about__card-set {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.card-set > .item {
+.section-about__card-set > .section-about__item {
   flex-basis: calc((100% - 30px * var(--grid-about)) / var(--grid-about));
   margin-left: 30px;
   margin-top: 30px;
 }
-.card-set .card {
+.section-about__card-set .card {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px #00000033;
   border-radius: 0px 0px 4px 4px;
   background: #ffffff;
 }
-.card .img {
+.card .card__box-img {
   min-height: 260px;
 }
-.card-content {
+.card__content {
   padding-top: 30px;
 }
-.card-heading {
+.card__heading {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -166,27 +166,28 @@
   line-height: 1.18;
   text-align: center;
 }
-.card-text {
+.card__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
-.card-social {
+.card__social {
   display: flex;
   padding-top: 16px;
   padding-bottom: 30px;
   justify-content: center;
 }
-.card-list {
+.social__list {
   display: flex;
 }
-.social-item {
+.social__item {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
-.sociak-link {
-  display: inline-flex;
+.social__link {
+  display: flex;
   align-items: center;
   justify-content: center;
   color: #afb1b8;
@@ -197,15 +198,15 @@
   transition: background-color 250ms var(--cubic-bezier),
     color 250ms var(--cubic-bezier);
 }
-.sociak-link:hover,
-.sociak-link:focus {
+.social__link:hover,
+.social__link:focus {
   border-radius: 50%;
   background-color: var(--accent-color);
   background-position: center;
   color: #ffffff;
 }
 
-.icon {
+.social__link > .link__icon {
   fill: currentColor;
   width: 20px;
   height: 20px;
